@@ -22,7 +22,6 @@ pipeline {
                 echo 'Rodando os testes com cobertura...'
                 bat 'coverage run teste.py'
                 bat 'coverage xml -o coverage.xml'
-                bat 'coverage report'
             }
         }
 

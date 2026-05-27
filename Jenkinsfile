@@ -16,7 +16,7 @@ pipeline {
                 bat 'python teste.py'
             }
         }
-/*  Teste de cobertura
+
         stage('Code Coverage Test') {
             steps {
                 echo 'Rodando os testes com cobertura...'
@@ -24,17 +24,14 @@ pipeline {
                 bat 'coverage xml -o coverage.xml'
             }
         }
-*/
     }
 
     post {
-        /*
         always {
             recordCoverage(
                 tools: [[parser: 'COBERTURA', pattern: 'coverage.xml']]
             )
         }
-        */
         success {
             echo 'Build e teste executados com SUCESSO!'
         }

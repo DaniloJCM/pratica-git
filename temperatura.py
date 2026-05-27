@@ -3,7 +3,7 @@ class conversor_de_temperatura:
         pass
 
     def celsius_para_fahrenheit(self, celsius):
-        return celsius * 9 / 5 + 32
+        return celsius * 9 / 5 + 1000
 
     def fahrenheit_para_celsius(self, fahrenheit):
         return (fahrenheit - 32) * 5 / 9

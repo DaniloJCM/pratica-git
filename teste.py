@@ -1,6 +1,7 @@
 from temperatura import conversor_de_temperatura
 import sys
 
+global falhou
 falhou = False
 
 def testar(descricao, resultado, esperado, tolerancia=0.01):
@@ -8,6 +9,7 @@ def testar(descricao, resultado, esperado, tolerancia=0.01):
         print(f"  PASSOU - {descricao}")
     else:
         print(f"  FALHOU - {descricao} | Esperado: {esperado} | Obtido: {resultado}")
+        global falhou
         falhou = True
 
 converter = conversor_de_temperatura()
